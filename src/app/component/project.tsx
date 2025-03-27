@@ -1,174 +1,71 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import project2 from "../../../public/project2.png"
-import project1 from "../../../public/project1.png";
-import project3 from "../../../public/project3.png"
-import project4 from "../../../public/project4.png"
-import project5 from "../../../public/project5.png"
-import project6 from "../../../public/project6.png"
-const Project = () => {
+'use client';
+import React from 'react';
+import Image from 'next/image';
+
+const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      title: 'Project 01: Ecommerce Store',
+      description: 'A modern e-commerce store built with Next.js, Tailwind, and Stripe.',
+      imageUrl: '/project1.jpg',
+      projectLink: 'https://project-01-ecommerce-arbish.vercel.app/'
+    },
+    {
+      id: 2,
+      title: 'Project 02: Portfolio Website',
+      description: 'A sleek and responsive personal portfolio website.',
+      imageUrl: '/project2.jpg',
+      projectLink: 'https://project-02-portfolio-arbish.vercel.app/'
+    },
+    {
+      id: 3,
+      title: 'Project 03: Task Manager',
+      description: 'A to-do list app with drag-and-drop features.',
+      imageUrl: '/project3.jpg',
+      projectLink: 'https://project-03-taskmanager-arbish.vercel.app/'
+    },
+    {
+      id: 4,
+      title: 'Project 04: Library Manager',
+      description: 'A book management system with user authentication.',
+      imageUrl: '/project4.jpg',
+      projectLink: 'https://project-04-library-manager-arbish.streamlit.app/'
+    }
+  ];
+
   return (
-    <div id="project"><section className="text-gray-600 body-font">
-    <div className="container px-5 py-24 mx-auto">
-      <div className="flex flex-col text-center w-full mb-20">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-          My Projects
-        </h1>
-        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-        ✅ "Here are some of the projects I have worked on, showcasing my skills and expertise
-        </p>
-      </div>
-      <div className="flex flex-wrap -m-5 -mt-[5rem]">
-        <div className="lg:w-1/3 sm:w-1/2 p-4">
-          <div className="flex relative">
-            <Image
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              src={project1}
-            />
-            <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-               Resume Builder Project
-              </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-           Resume Builder 
-              </h1>
-              <p className="leading-relaxed line-clamp-2">
-                Dynamic Responsive Resume Generator Project
-              </p>
-            <Link href="https://dynamic-resume-generator-tau.vercel.app/" target="_blank" rel="noopener noreferrer">
-  <p className="leading-relaxed text-blue-500 hover:underline">View Project..</p>
-</Link>
-
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/3 sm:w-1/2 p-4">
-          <div className="flex relative">
-          <Image
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-contain object-center"
-              src={project2}
-            />
-            
-            <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                Convertor project
-              </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                Unit Convertor Project
-              </h1>
-              <p className="leading-relaxed line-clamp-2">
-              I’ve developed a Unit Converter using Python and Streamlit that allows users to easily convert units of length, weight, temperature, and more with a simple interface
-              </p>
-              <Link href="https://project-02-unit-converter-arbish.streamlit.app/" target="_blank" rel="noopener noreferrer">
-  <p className="leading-relaxed text-blue-500 hover:underline">View Project..</p>
-</Link>
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/3 sm:w-1/2 p-4">
-          <div className="flex relative">
-          <Image
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-contain object-center"
-              src={project3}
-            />
-            
-            <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                Personal Library Manager
-              </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                Library Manager Project
-              </h1>
-              <p className="leading-relaxed line-clamp-2">
-              This web app makes it super easy to add, remove, search, and manage books in your personal collection. It also saves data, so your library remains intact even after closing the app! 💾
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/3 sm:w-1/2 p-4">
-          <div className="flex relative">
-            <img
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              src="https://project-04-library-manager-arbish.streamlit.app/"
-            />
-             <Image
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              src={project4}
-            />
-            <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-              Password Strength checker
-              </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                Password Strength Checker project
-              </h1>
-              <p className="leading-relaxed">
-              Password Strength Checker Your Security Matters! 🚀
-              </p>
-              <Link href="https://project-03-password-strength-checker-arbish.streamlit.app/" target="_blank" rel="noopener noreferrer">
-              <p className="leading-relaxed text-blue-500 hover:underline">View Project..</p>
-</Link>
-
-            </div>
-          </div>
-        </div>
-        <div className="lg:w-1/3 sm:w-1/2 p-4">
-          <div className="flex relative">
-          <Image
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              src={project5}
+    <section id="projects" className="py-16 bg-gray-100">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8">My Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div key={project.id} className="relative group rounded-lg shadow-lg overflow-hidden">
+              <Image 
+                src={project.imageUrl} 
+                alt={project.title} 
+                width={400} 
+                height={250} 
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                Modern Blog
-              </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                Modern Blog Website
-              </h1>
-              <p className="leading-relaxed">
-                A modern blog application built with Next.js and Sanity! 
-              </p>
-              <Link href="https://text-sanity-70zfo28du-arbish-mohiuddins-projects.vercel.app" target="_blank" rel="noopener noreferrer">
-                <p className="leading-relaxed text-blue-500 hover:underline">View Project..</p>
-              </Link>
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
+                <h3 className="text-lg font-bold">{project.title}</h3>
+                <p className="text-sm mb-2">{project.description}</p>
+                <a 
+                  href={project.projectLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+                >
+                  View Project
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="lg:w-1/3 sm:w-1/2 p-4">
-          <div className="flex relative">
-          <Image
-              alt="gallery"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-              src={project6}
-              />
-            <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                File Convertor and Cleaner
-              </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-              File Convertor and Cleaner Project
-              </h1>
-              <p className="leading-relaxed">
-              I built a web app that helps users upload, clean, and convert CSV/Excel files with ease.
-              </p>
-              <Link href="https://project-01-growth-mindset-arbish.streamlit.app/" target="_blank" rel="noopener noreferrer">
-                <p className="leading-relaxed text-blue-500 hover:underline">View Project..</p>
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
-  </section>
-  </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Project
+export default Projects;
