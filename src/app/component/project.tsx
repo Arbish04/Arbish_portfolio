@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import project2 from "../../../public/project2.png"
+import project2 from "../../../public/project2.png";
 import project1 from "../../../public/project1.png";
-import project3 from "../../../public/project3.png"
-import project4 from "../../../public/project4.png"
-import project5 from "../../../public/project5.png"
-import project6 from "../../../public/project6.png"
+import project3 from "../../../public/project3.png";
+import project4 from "../../../public/project4.png";
+import project5 from "../../../public/project5.png";
+import project6 from "../../../public/project6.png";
 const Project = () => {
   return (
     <div id="project"><section className="text-gray-600 body-font">
