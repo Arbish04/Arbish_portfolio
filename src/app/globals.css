@@ -1,26 +1,14 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+footer a {
+    color: #0077b5; /* LinkedIn Blue */
+    transition: 0.3s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+footer a:hover {
+    color: #005582; /* Darker shade on hover */
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+footer {
+    padding: 1px 1px;  /* Upar aur Neeche kam jagah */
+    font-size: 14px;  /* Thoda chhota text */
 }
